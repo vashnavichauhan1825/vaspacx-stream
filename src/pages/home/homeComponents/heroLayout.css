@@ -1,0 +1,80 @@
+.hero-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-image: linear-gradient(to bottom, #eeeeee00 85%, #0d2424 99%),url('./../../../assets/img/astro.jpg');
+}
+
+
+.search-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.search-nav .search{
+    background-color: #5a5f5f33;
+    border: 1px solid var(--sec-txt-color);
+    padding: 8px 5px;
+    border-radius: 5px;
+    color: var(--primary-txt-color);
+    min-width: 450px
+}
+
+.profile-img{
+    width:40px;
+    height:40px;
+}
+
+.profile-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+
+.profile-nav i{
+    color:var(--sec-txt-color);
+    font-size: 20px;
+}
+
+.hero-details{
+    margin: 2rem;
+    width: 438px;
+    letter-spacing: 1px;
+    line-height: 2;
+    padding: 4rem;
+}
+
+.hero-details button{
+    padding: 0.5rem;
+    width: 100px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--cta-color);
+    color: var(--secondary-color);
+    border: none;
+    box-shadow: 0px 0px 7px 4px var(--bg-color);
+}
+
+.clr-pri{
+    color:var(--primary-txt-color);
+}
+
+.clr-sec{
+    color:var(--sec-txt-color)
+}
+
+.bdr-hue{
+    border-radius:50%;
+    padding:0.2rem;
+    border:2px dotted var(--hue-color);
+}
