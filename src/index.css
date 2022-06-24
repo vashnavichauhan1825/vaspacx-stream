@@ -15,5 +15,21 @@ body {
   --sec-txt-color:#94a5a5;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:var(--bg-color); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--hue-color); 
+}
+
+
+
 /* font-family: 'Manrope', sans-serif;
 font-family: 'Rubik Glitch', cursive; */
