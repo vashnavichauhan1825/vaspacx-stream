@@ -1,5 +1,6 @@
-.home{
-    display:grid;
-    grid-template-columns:300px 1fr;
-    overflow:hidden;
+
+
+.main-layout{
+    margin-left: 317px;
+    overflow: hidden;
 }

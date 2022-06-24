@@ -2,9 +2,10 @@ import React from 'react'
 import './heroLayout.css'
 import avatarOne from './../../../assets/img/avatarOne.png'
 import CategoryPanel from './categories/CategoryPanel'
+import CategoryList from './categories/CategoryList/CategoryList'
 const HeroLayout = () => {
   return (
-    <div>
+    <div className='home-section'>
     <div className='hero-cont'>
         <div className='search-nav'>
         <input  className="search" placeholder="Search..." />
@@ -29,6 +30,7 @@ const HeroLayout = () => {
         </div>
     </div>
     <CategoryPanel/>
+    <CategoryList/>
     </div>
   )
 }

@@ -5,7 +5,10 @@ const HomeWrapper = ({children}) => {
   return (
     <div className='home'>
         <Sidebar/>
+        <div className='main-layout'>
         {children}
+        </div>
+      
     </div>
   )
 }

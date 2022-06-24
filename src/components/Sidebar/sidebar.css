@@ -17,6 +17,7 @@
 /* sidebar */
 
 .sidebar{
+    position: fixed;
     display:inline-block;
     height: 100vh;
     width: 300px;
