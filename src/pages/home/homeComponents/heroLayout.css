@@ -3,12 +3,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 75vh;
+    height: 86vh;
     background-size: cover;
     background-repeat: no-repeat;
-     background-image: linear-gradient(to bottom, #eeeeee00 85%, #0d2424 99%),url('./../../../assets/img/astro.jpg');
+    background-image: linear-gradient(to bottom, #eeeeee00 87%, #0d2424 97%),url('./../../../assets/img/astro.jpg');
 }
-
 
 .search-nav{
     display: flex;
@@ -50,6 +49,10 @@
     letter-spacing: 1px;
     line-height: 2;
     padding: 4rem;
+}
+
+.hero-details img{
+    width:600px;
 }
 
 .hero-details button{

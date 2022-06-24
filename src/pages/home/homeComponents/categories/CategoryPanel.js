@@ -11,17 +11,17 @@ const CategoryPanel = ({category,setCategory}) => {
     onClick={()=>setCategory('Sci-Fi')}>
         Sci-Fi
     </span>
-    <span className={`${category === "Info" && "active" }`}
-    onClick={()=>setCategory("Info")}>
-        Info
+    <span className={`${category === "Documentry" && "active" }`}
+    onClick={()=>setCategory("Documentry")}>
+        Documentry
     </span>
-    <span className={`${category === "Space" && "active" }`}
-    onClick={()=>setCategory("Space")}>
-        Space
+    <span className={`${category === "Facts" && "active" }`}
+    onClick={()=>setCategory("Facts")}>
+        Facts
     </span>
-    <span className={`${category === "Series" && "active" }`}
-    onClick={()=>setCategory("Series")}>
-        Series
+    <span className={`${category === "Experiments" && "active" }`}
+    onClick={()=>setCategory("Experiments")}>
+        Experiments
     </span>
     <span className={`${category === "Kid's TV" && "active" }`}
     onClick={()=>setCategory("Kid's TV")}>

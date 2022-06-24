@@ -24,3 +24,10 @@
     border:2px solid var(--hue-color);
 
 }
+
+.category-panel .active{
+    background-color:var(--cta-color);
+    color:var(--secondary-color);
+    font-weight: bold;
+    border:2px solid var(--hue-color);
+}

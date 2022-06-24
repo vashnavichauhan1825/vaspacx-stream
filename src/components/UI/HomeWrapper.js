@@ -8,7 +8,6 @@ const HomeWrapper = ({children}) => {
         <div className='main-layout'>
         {children}
         </div>
-      
     </div>
   )
 }
