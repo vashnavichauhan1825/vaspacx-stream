@@ -1,13 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700;800&family=Rubik+Glitch&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:'Manrope', sans-serif;
+  background-color:var(--secondary-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+:root{
+  --secondary-color:#0D2424;
+  --bg-color:#082222cc;
+  --cta-color:#9Bffff;
+  --hue-color:#00ffff;
+  --primary-txt-color:#ffff;
+  --sec-txt-color:#94a5a5;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:var(--bg-color); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--hue-color); 
+}
+
+
+
+/* font-family: 'Manrope', sans-serif;
+font-family: 'Rubik Glitch', cursive; */

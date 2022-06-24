@@ -1,0 +1,33 @@
+.category-panel{
+    display:flex;
+    justify-content: space-around;
+}
+
+.category-panel span{
+    padding: 0.3rem;
+    text-align: center;
+    border: 5px;
+    font-size: 1rem;
+    border-radius: 15px;
+    color: var(--primary-txt-color);
+    background: #142d2d;
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid var(--sec-txt-color);
+}
+
+
+.category-panel span:hover{
+    background-color:var(--cta-color);
+    color:var(--secondary-color);
+    font-weight: bold;
+    border:2px solid var(--hue-color);
+
+}
+
+.category-panel .active{
+    background-color:var(--cta-color);
+    color:var(--secondary-color);
+    font-weight: bold;
+    border:2px solid var(--hue-color);
+}
