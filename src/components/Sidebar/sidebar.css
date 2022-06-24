@@ -29,6 +29,12 @@
     padding: 1rem 1rem 1rem 0rem;
 }
 
+.sidebar li{
+    text-decoration:none;
+}
+
+ul a{
+    text-decoration:none;}
 
 .sidebar-list-cont{
     margin-top:50px;
@@ -46,19 +52,26 @@ ul li{
     padding: 1rem;
     font-size: 20px;
     color: var(--primary-txt-color);
+    cursor: pointer;
 }
 
-ul li:hover{
+ul .active{
     background-color: #5a5f5f2e;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    text-decoration:none;
+}
+
+ul .inactive{
+    color: var(--primary-txt-color);
+    text-decoration: none;
 }
 
 ul li i{
  color:var(--cta-color);
 }
 
-.hover-item {
+ul .active-item {
     position: absolute;
     width: 17px;
     left: 0%;
@@ -70,3 +83,11 @@ ul li i{
     box-shadow: 2px -1px 9px 1px var(--hue-color);
 }
 
+ ul .inactive-link{
+    position: absolute;
+    width: 17px;
+    left: 0%;
+    top: 1%;
+    background-color: var(--primary-txt-color);
+    box-shadow: 2px -1px 9px 1px var(--primary-txt-color);
+}

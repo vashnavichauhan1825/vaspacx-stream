@@ -1,8 +1,9 @@
+import { NavLink, useLocation } from "react-router-dom";
 import "./sidebar.css";
 
 
 const Sidebar = () => {
-    
+  const location = useLocation();
   return (
     <>
       <div className="sidebar">
@@ -12,29 +13,42 @@ const Sidebar = () => {
           <span className="clr-hue">stream</span>
         </span>
         <ul className="sidebar-list-cont">
-          <li>
-          <div className="hover-item"></div>
+        <NavLink to="/">
+          <li className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+          {location.pathname === "/"  &&  <div className='active-item'></div> }
             <i className="fa fa-home"></i>
             <span>Home</span>
           </li>
-          <li>
-          
-            <i className="fa fa-thumbs-up" aria-hidden="true"></i>
+          </NavLink>
+          <NavLink to="/liked">
+          <li className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+          {location.pathname === "/liked"  &&  <div className='active-item'></div> }
+            <i className="fa fa-thumbs-up"></i>
             <span>Liked</span>
           </li>
-          <li>
-          
-            <i className="fa fa-list" aria-hidden="true"></i>
+          </NavLink>
+          <NavLink to="/playlist">
+          <li className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+          {location.pathname === "/playlist"  &&  <div className='active-item'></div> }
+            <i className="fa fa-list"></i>
             <span>Playlist</span>
           </li>
-          <li>
-            <i className="fa fa-history" aria-hidden="true"></i>
+          </NavLink>
+          <NavLink to="/history">
+          <li className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+          {location.pathname === "/history"  &&  <div className='active-item'></div> }
+            <i className="fa fa-history"></i>
             <span>History</span>
           </li>
-          <li>
-            <i className="fa fa-clock-o" aria-hidden="true"></i>
+          </NavLink>
+          <NavLink to="/watchlater">
+          <li className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+          {location.pathname === "/watchlater"  &&  <div className='active-item'></div> }
+            <i className="fa fa-clock-o"></i>
             <span>Watch Later</span>
           </li>
+          </NavLink>
+        
         </ul>
       </div>
     </>
