@@ -29,7 +29,7 @@ const Sidebar = () => {
           </li>
           <li>
             <i className="fa fa-history" aria-hidden="true"></i>
-            <span>Liked</span>
+            <span>History</span>
           </li>
           <li>
             <i className="fa fa-clock-o" aria-hidden="true"></i>
