@@ -16,6 +16,11 @@
     color: var(--primary-txt-color);
     gap: 20px; 
 }
+
+.login-nav a{
+    text-decoration: none;
+    color:var(--primary-txt-color);
+}
 .text-button{
     padding: 0.5rem;
     width: auto;

@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import "./home.css";
 import { NavLink } from "react-router-dom";
@@ -23,7 +23,7 @@ const HomeWrapper = ({ children }) => {
      
       {layoutValue && <Sidebar />}
       {!layoutValue && <div className="login-nav">
-        <p>Home</p>
+        <Link to="/"><p>Home</p></Link>
        <button className="text-button" onClick={()=>isLoggedIn? logout(): navigate('/login')}>{isLoggedIn?"Logout":"Login"}</button> 
       </div>}
       <div className={layoutValue? "main-layout" : "auth-layout"}>

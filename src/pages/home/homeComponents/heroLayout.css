@@ -17,6 +17,10 @@
     padding: 1rem;
 }
 
+.profile-nav .fa{
+    cursor: pointer;
+}
+
 .search-nav .search{
     background-color: #5a5f5f33;
     border: 1px solid var(--sec-txt-color);
@@ -33,9 +37,9 @@
 
 .profile-nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 100px;
+    width: 200px;
 }
 
 .profile-nav i{
