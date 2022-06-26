@@ -10,7 +10,7 @@ import Signup from "components/Auth/Signup";
 function App() {
   return (
   <>
-  <HomeWrapper>
+  {<HomeWrapper>
   <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/liked" element={<Like/>}/>
@@ -19,7 +19,7 @@ function App() {
     <Route path="playlist" element={<Playlist/>}/>
      <Route path="/signup" element={<Signup/>}/>
    </Routes>
-   </HomeWrapper>
+   </HomeWrapper>}
   </>
   )
 }
