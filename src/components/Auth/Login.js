@@ -10,7 +10,7 @@ const Login = () => {
         email:"",
         password:"",
     })
-
+    const [passwordVisible,setPasswordVisible]= useState(false)
     const {login} = useAuthCtx();
 
     const submitHandler=(e)=>{
@@ -31,9 +31,10 @@ const Login = () => {
         <div className='name-info'>
             <span>
             <label for="pass">Password</label>
-            <input id="pass" type="password"  onChange={(e)=>setFormDetails({...formDetails,password:e.target.value})} />
+            <input id="pass" type={passwordVisible?"text":"password"}  onChange={(e)=>setFormDetails({...formDetails,password:e.target.value})} />
             </span>
-            <i className="fa fa-address-card-o" aria-hidden="true"></i>
+           
+            <div onClick={()=>setPasswordVisible(!passwordVisible)}>{!passwordVisible?<i class="fa fa-eye-slash" aria-hidden="true"></i>:<i class="fa fa-eye" aria-hidden="true"></i>}</div>
         </div>
         <div className='button-cont'>
           <PrimaryButton>Login <i className="fa fa-sign-in" aria-hidden="true"></i></PrimaryButton>
