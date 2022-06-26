@@ -29,6 +29,7 @@ form{
 .name-info span{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .name-info span label{
@@ -40,19 +41,46 @@ font-size:10px;
     background: transparent;
     border: none;
     width: auto;
+    font-weight: bold;
+    color:var(--primary-txt-color);
 }
 
+
+
 input:focus{
+    background:transparent;
     outline: none;
     font-weight: bold;
     width: auto;
-    color:var(--primary-txt-color);
-    background:transparent;
 }
 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #152e3b inset !important;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--primary-txt-color) !important;
+}
 
 .button-cont{
     display: flex;
     justify-content: space-between;
     gap: 20px; 
+}
+
+.sec-button{
+    padding: 0.5rem;
+    width: auto;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #1c2f2f;
+    color: var(--sec-txt-color);
+    border: none;
+    box-shadow: 0px 0px 7px 4px var(--bg-color);
 }

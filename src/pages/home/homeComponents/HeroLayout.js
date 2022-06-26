@@ -2,6 +2,7 @@ import React from 'react'
 import './heroLayout.css'
 import avatarOne from './../../../assets/img/avatarOne.png'
 import heroHeading from './../../../assets/img/heroHeading.png'
+import { Link } from 'react-router-dom'
 import PrimaryButton from 'components/UI/button/PrimaryButton'
 const HeroLayout = () => {
 
@@ -12,11 +13,12 @@ const HeroLayout = () => {
         <input  className="search" placeholder="Search..." />
          <div className='profile-nav'>
             <i className="fa fa-bell" ></i>
-            <div className='bdr-hue'>
+            <Link to="/login">
+            <div className='bdr-hue' >
                 
                     <img className='profile-img' src={avatarOne}/>
                
-            </div>
+            </div></Link>
          </div>
         </div>
         <div className='hero-details'>

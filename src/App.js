@@ -6,6 +6,7 @@ import WatchLater from "pages/watchLater/WatchLater";
 import History from "pages/History/History";
 import Playlist from "pages/playlist/Playlist";
 import Signup from "components/Auth/Signup";
+import Login from "components/Auth/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path="/history" element={<History/>}/>
     <Route path="playlist" element={<Playlist/>}/>
      <Route path="/signup" element={<Signup/>}/>
+     <Route path="/login" element={<Login/>}/>
    </Routes>
    </HomeWrapper>}
   </>

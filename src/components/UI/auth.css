@@ -1,7 +1,7 @@
 .auth-cont{
     padding: 2rem;
     background: rgba( 13, 36, 36, 0.35 );
-    /* box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%); */
+    width: 420px;
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
