@@ -1,0 +1,10 @@
+.text-button{
+    padding: 0.5rem;
+    width: auto;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    background:transparent;
+    color: var(--sec-txt-color);
+    border: none;
+}

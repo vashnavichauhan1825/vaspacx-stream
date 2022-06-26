@@ -2,6 +2,7 @@ import React from 'react'
 import './heroLayout.css'
 import avatarOne from './../../../assets/img/avatarOne.png'
 import heroHeading from './../../../assets/img/heroHeading.png'
+import PrimaryButton from 'components/UI/button/PrimaryButton'
 const HeroLayout = () => {
 
   return (
@@ -24,7 +25,7 @@ const HeroLayout = () => {
             Due to unforeseeable circumstances, the Robinsons, a family of space colonists, crash-land on an unknown planet. Now, they must fight for survival and escape, 
             despite the dangers surrounding them.
             </p>
-            <button>WATCH <i class="fa fa-play" aria-hidden="true"></i></button>
+            <PrimaryButton>WATCH <i class="fa fa-play" aria-hidden="true"></i></PrimaryButton>
         </div>
     </div>
   
