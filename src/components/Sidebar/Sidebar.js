@@ -1,9 +1,11 @@
 import Vaspacx from "components/UI/logo/Vaspacx";
-import { NavLink, useLocation } from "react-router-dom";
+import { useAuthCtx } from "Context/AuthContext";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
   const location = useLocation();
+  const {isLoggedIn,logout} = useAuthCtx();
   return (
     
       <div className="sidebar">
@@ -63,6 +65,10 @@ const Sidebar = () => {
               <span>Watch Later</span>
             </li>
           </NavLink>
+        </ul>
+        <ul className="sidebar-login-box">
+        {!isLoggedIn? <Link to="/login"><li><i class="fa fa-user" aria-hidden="true"></i><span>Account</span></li></Link>:
+         <li onClick={logout}><i class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span></li>}
         </ul>
       </div>
   

@@ -7,6 +7,7 @@ import History from "pages/History/History";
 import Playlist from "pages/playlist/Playlist";
 import Signup from "components/Auth/Signup";
 import Login from "components/Auth/Login";
+import SinglePlaylistPage from "pages/playlist/playlistComponent/SinglePlaylistPage";
 
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
             <Route path="/liked" element={<Like />} />
             <Route path="/watchlater" element={<WatchLater />} />
             <Route path="/history" element={<History />} />
-            <Route path="playlist" element={<Playlist />} />
-
+            <Route path="/playlist" element={<Playlist />} />
+            <Route path="/singleplaylist" element={<SinglePlaylistPage/>}></Route>
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>

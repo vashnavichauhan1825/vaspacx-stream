@@ -56,7 +56,13 @@ const CategoryList = ({ category }) => {
                 </div>
                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
               </div>
+              <ul className="dropdown-list">
+                <li><i class="fa fa-clock-o" aria-hidden="true"></i>Save To Watch later</li>
+                <li><i class="fa fa-list-ul" aria-hidden="true"></i>Save To Playlist </li>
+                <li><i class="fa fa-trash" aria-hidden="true"></i>Remove From Watch later</li>
+              </ul>
             </div>
+            
           );
         })}
     </div>

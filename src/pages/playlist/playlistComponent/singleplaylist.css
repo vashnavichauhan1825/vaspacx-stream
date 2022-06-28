@@ -1,0 +1,36 @@
+.playlist-box{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.video-list{
+    padding: 0.5rem;
+    display: grid;
+    background-color: #1c2f2f;
+    width: 100%;
+    grid-template-columns: 274px 1fr;
+    gap: 15px;
+    border-bottom: 1px solid var(--sec-txt-color);
+}
+
+.video-list .img-cont{
+    width: 275px;
+    height: 140px;
+}
+
+.video-list img{
+width: 100%;
+height:100%;
+}
+
+.video-list span{
+    padding-right: 10rem;
+    color: var(--sec-txt-color);
+}
+
+.video-list span p{
+    color: var(--primary-txt-color);
+}
+

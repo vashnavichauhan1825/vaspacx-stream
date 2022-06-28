@@ -43,9 +43,10 @@ ul a{
     flex-direction: column;
     gap:10px;
     padding:0;
+    border-bottom:1px dotted var(--sec-txt-color);
 }
 
-ul li{
+.sidebar-list-cont  li{
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -55,23 +56,23 @@ ul li{
     cursor: pointer;
 }
 
-ul .active{
+.sidebar-list-cont  .active{
     background-color: #5a5f5f2e;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     text-decoration:none;
 }
 
-ul .inactive{
+.sidebar-list-cont  .inactive{
     color: var(--primary-txt-color);
     text-decoration: none;
 }
 
-ul li i{
+.sidebar-list-cont  li i{
  color:var(--cta-color);
 }
 
-ul .active-item {
+.sidebar-list-cont  .active-item {
     position: absolute;
     width: 17px;
     left: 0%;
@@ -83,7 +84,7 @@ ul .active-item {
     box-shadow: 2px -1px 9px 1px var(--hue-color);
 }
 
-.sidebar-toggle{
+.sidebar-list-cont .sidebar-toggle{
     position: absolute;
     top:5px;
     left:205px;
@@ -94,12 +95,34 @@ ul .active-item {
     cursor: pointer;
 }
 
- ul .inactive-link{
+.sidebar-list-cont  .inactive-link{
     position: absolute;
     width: 17px;
     left: 0%;
     top: 1%;
     background-color: var(--primary-txt-color);
     box-shadow: 2px -1px 9px 1px var(--primary-txt-color);
+}
+
+.sidebar-login-box{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem 1rem;
+}    
+
+.sidebar-login-box li{
+    padding: 0rem 2rem;
+    display: flex;
+    font-size: 19px;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    color: var(--sec-txt-color);
+}
+
+.sidebar-login-box i{
+    font-size: 20px;
 }
 
