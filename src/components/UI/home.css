@@ -32,10 +32,6 @@
     border: none;
 }
 
-.main-layout{
-    margin-left: 317px;
-    overflow: hidden;
-}
 
 .auth-layout{
     display: flex;

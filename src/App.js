@@ -22,7 +22,7 @@ function App() {
             <Route path="/watchlater" element={<WatchLater />} />
             <Route path="/history" element={<History />} />
             <Route path="/playlist" element={<Playlist />} />
-            <Route path="/singleplaylist" element={<SinglePlaylistPage/>}></Route>
+            <Route path="/playlist/:playlistId" element={<SinglePlaylistPage/>}></Route>
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>

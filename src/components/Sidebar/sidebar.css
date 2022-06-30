@@ -16,7 +16,7 @@
 
 /* sidebar */
 
-.sidebar{
+/* .sidebar{
     position: fixed;
     display:inline-block;
     height: 100vh;
@@ -27,6 +27,12 @@
     --webkit-backdrop-filter: blur(20px);
     box-shadow:-3px 2px 20px 0px #637272;
     padding: 1rem 1rem 1rem 0rem;
+} */
+
+.rightIcon{
+    position: absolute;
+    right: -12%;
+    top: 53%;
 }
 
 .sidebar li{

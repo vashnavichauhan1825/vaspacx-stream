@@ -19,21 +19,21 @@ const HomeWrapper = ({ children }) => {
   };
 
   return (
-    <div className={layoutValue? "homeBg": "signupBg"}>
+  <>
      
-      {layoutValue && <Sidebar />}
-      {!layoutValue && <div className="login-nav">
+      
+      {!layoutValue && <div className="signupBg"> <div className="login-nav">
         <Link to="/"><p>Home</p></Link>
        <button className="text-button" onClick={()=>isLoggedIn? logout(): navigate('/login')}>{isLoggedIn?"Logout":"Login"}</button> 
-      </div>}
+      </div></div>}
       <div className={layoutValue? "main-layout" : "auth-layout"}>
-     
+      {layoutValue && <Sidebar />}
       {children}
       {!layoutValue && <Vaspacx/>}
       
       </div>
-     
-    </div>
+      </>
+    
   );
 };
 

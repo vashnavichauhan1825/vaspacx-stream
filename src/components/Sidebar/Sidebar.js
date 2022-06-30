@@ -2,13 +2,32 @@ import Vaspacx from "components/UI/logo/Vaspacx";
 import { useAuthCtx } from "Context/AuthContext";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "./sidebar.css";
+import rightIcon from './../../assets/img/arrows.png'
+import { useState } from "react";
+import styled from "styled-components";
 
+const SidebarWrapper = styled.div`
+    position: fixed;
+    display:inline-block;
+    height: 100vh;
+    left:${(props)=>props.slide};
+    z-index:1;
+    width: 300px;
+    border-right: 0px solid var(--hue-color);
+    backdrop-filter: blur(10px);
+    background: #142d2d94;
+    --webkit-backdrop-filter: blur(20px);
+    box-shadow:-3px 2px 20px 0px #637272;
+    padding: 1rem 1rem 1rem 0rem;
+    transition:all 0.5s ease-in-out;
+`
 const Sidebar = () => {
+  const [openSideBar, setOpenSidebar]= useState(true)
   const location = useLocation();
   const {isLoggedIn,logout} = useAuthCtx();
   return (
     
-      <div className="sidebar">
+      <SidebarWrapper  slide={openSideBar?"-315px":"0px"}>
        <Vaspacx/>
 
         <ul className="sidebar-list-cont">
@@ -70,7 +89,8 @@ const Sidebar = () => {
         {!isLoggedIn? <Link to="/login"><li><i class="fa fa-user" aria-hidden="true"></i><span>Account</span></li></Link>:
          <li onClick={logout}><i class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span></li>}
         </ul>
-      </div>
+        <img onClick={()=>setOpenSidebar(prev =>!prev)} className="rightIcon" src={rightIcon}/>
+      </SidebarWrapper>
   
   );
 };

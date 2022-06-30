@@ -3,11 +3,14 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items:center;
+    
 }
 
 .video-list{
     padding: 0.5rem;
     display: grid;
+    max-width: 1086px;
     background-color: #1c2f2f;
     width: 100%;
     grid-template-columns: 274px 1fr;

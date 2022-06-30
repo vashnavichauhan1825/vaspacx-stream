@@ -1,13 +1,33 @@
 .playlist-cont{
     display: flex;
     gap: 30px;
+    justify-content: space-evenly;
     padding: 2rem;
 }
 
 .single-playlist{
-    width: 320px;
+    width: 350px;
     height: 200px;
+    border-radius: 5px;
+    background-color: #2f3a3a;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     position: relative;
+}
+
+.single-playlist .fa-trash {
+    bottom: 2%;
+    font-size: 25px;
+    z-index: 2;
+    right: 2%;
+    position: absolute;
+}
+
+.single-playlist h3{
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-left: 20px;  
 }
 
 a{

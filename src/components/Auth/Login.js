@@ -16,7 +16,7 @@ const Login = () => {
     const submitHandler=(e)=>{
         e.preventDefault();
         login(formDetails);
-        console.log(formDetails)
+      
     }
   return (
     <AuthWrapper>

@@ -33,7 +33,7 @@ const AuthProvider = ({ children }) => {
       navigate("/login")
       }
     } catch (error) {
-      console.log(error);
+   
     }
   };
 
@@ -45,7 +45,7 @@ const AuthProvider = ({ children }) => {
         password: password,
       });
       if (response.status === 200) {
-        console.log(response);
+       
         localStorage.setItem("token",response.data.encodedToken);
         localStorage.setItem("user",response.data.foundUser.firstName);
         setToken(response.data.encodedToken);
@@ -53,7 +53,7 @@ const AuthProvider = ({ children }) => {
         navigate("/")
      }
     } catch (error) {
-      console.log(error);
+     
     }
   };
 
