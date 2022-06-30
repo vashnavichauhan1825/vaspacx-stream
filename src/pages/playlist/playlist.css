@@ -1,5 +1,6 @@
 .playlist-cont{
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     justify-content: space-evenly;
     padding: 2rem;
@@ -27,7 +28,21 @@
 .single-playlist h3{
     letter-spacing: 1px;
     font-size: 30px;
-    margin-left: 20px;  
+    font-weight: 400;
+    padding: 0;
+    position: absolute;
+    color: var(--primary-txt-color);
+    top: 0%;
+    left: 4%;
+}
+
+.single-playlist small{
+    position: absolute;
+    top: 40%;
+    font-size: 15px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    left: 4%;   
 }
 
 a{
@@ -37,6 +52,7 @@ a{
 .single-playlist img{
     width: 100%;
     height: 100%;
+    opacity: 0.7;
 }
 
 .playlist-hover{
@@ -54,6 +70,18 @@ a{
 
 }
 
-.playlist-hover i{
-
+@media only screen and (max-width: 600px){
+    .video-list{
+        grid-template-columns: 207px 1fr;
+    }
+    .video-list .img-cont {
+        width: 213px;
+        height: 186px;
+    }
+    .video-list span {
+        padding: 0;
+    }
+    .video-list span p {
+        margin: 0;
+    }
 }

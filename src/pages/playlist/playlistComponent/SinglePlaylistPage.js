@@ -7,7 +7,7 @@ const SinglePlaylistPage = () => {
     const encodedToken = localStorage.getItem("token")
     const [playlists,setPlaylists]= useState({name:"",videos:[]});
     const {playlistId} =useParams();
-    const {playlist}= usePlaylistCtx();
+    const {playlist,removeVideoHandler }= usePlaylistCtx();
 
     useEffect(() => {
         (async function () {
@@ -30,9 +30,12 @@ const SinglePlaylistPage = () => {
         })();
       }, [playlist]);
 
+      const videoLength = playlists.videos.length
+
   return (
     <div className='playlist-box'>
-    <h1>{playlists.name}</h1>
+    <h1>{playlists.name}</h1>{videoLength? 
+    <>
       {playlists.videos.map((video)=>(
         <div className='video-list'>
         <div className='img-cont'>
@@ -42,26 +45,9 @@ const SinglePlaylistPage = () => {
                 <p>{video.title}</p>
                 <small>{video.description}</small>
             </span>
+            <i onClick={()=>removeVideoHandler(playlistId, video._id)}  class="fa fa-times" aria-hidden="true"></i>
         </div>
-     ) )  }
-        {/* <div className='video-list'>
-        <div className='img-cont'>
-            <img src={imgPlay} />
-            </div>
-            <span>
-                <p>Dikshant - Aankhon Se Batana (Official Audio)</p>
-                <small>Hello, Happy Valentine's Day ! ❤ Two years ago, Dikshant and his brother  Yash Jadhav used to sit down every evening but one day</small>
-            </span>
-        </div>
-        <div className='video-list'>
-        <div className='img-cont'>
-            <img src={imgPlay} />
-            </div>
-            <span>
-                <p>Dikshant - Aankhon Se Batana (Official Audio)</p>
-                <small>Hello, Happy Valentine's Day ! ❤ Two years ago, Dikshant and his brother  Yash Jadhav used to sit down every evening but one day</small>
-            </span>
-        </div> */}
+     ) )  }</>:<p>{`your ${playlists.name} playlist is empty !`}</p>}
     </div>
   )
 }

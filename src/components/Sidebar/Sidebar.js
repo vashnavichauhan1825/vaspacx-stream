@@ -8,8 +8,7 @@ import styled from "styled-components";
 
 const SidebarWrapper = styled.div`
     position: fixed;
-    display:inline-block;
-    height: 100vh;
+    height: 100%;
     left:${(props)=>props.slide};
     z-index:1;
     width: 300px;

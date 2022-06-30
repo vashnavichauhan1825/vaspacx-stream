@@ -19,8 +19,8 @@ const AvatarCont = styled.div`
 
 const CategoryList = ({ category }) => {
   const [listItem, setListItem] = useState([]);
-  const [dropDown, setDropDown] = useState(false);
-const {setPlaylistModal,removeVideoHandler,playlistModal}= usePlaylistCtx();
+  const [dropDown, setDropDown] = useState({state:false,videoId:null});
+const {setPlaylistModal}= usePlaylistCtx();
  const {isLoggedIn} = useAuthCtx();
   useEffect(() => {
     (async function () {
@@ -42,6 +42,7 @@ const {setPlaylistModal,removeVideoHandler,playlistModal}= usePlaylistCtx();
         .filter((item) => (category ? item.category === category : item))
         .map((video) => {
           return (
+           
     <div className="video-item" key={video._id}>
             
               <img className="video-img" alt="" src={video.thumbnail} />
@@ -56,20 +57,22 @@ const {setPlaylistModal,removeVideoHandler,playlistModal}= usePlaylistCtx();
                     <div>
                       <small>{video.views}</small>
                       <small>
-                        <i className="fa fa-circle" aria-hidden="true"></i>{" "}
+                        <i className="fa fa-circle" aria-hidden="true"></i>
                         {video.publish}
                       </small>
                     </div>
                   </div>
                 </div>
-                <button  className="dropDown-btn"  onClick={()=>{setDropDown(prev=>!prev)}}> <i
+                <button  className="dropDown-btn"  onClick={()=>{setDropDown({state:true,videoId:video._id})}}> <i
                   className="fa fa-ellipsis-v"
                   aria-hidden="true"
                 ></i></button>
-                {dropDown && (
+                
+              </div>
+              {dropDown.videoId === video._id && 
                 <div
                   className="dropdown-list"
-                  onClick={()=>{setDropDown(prev=>!prev)}}
+                  onClick={()=>{setDropDown({state:false,videoId:null})}}
                 >
                   <li>
                     <i className="fa fa-clock-o" aria-hidden="true"></i>Save To
@@ -84,15 +87,16 @@ const {setPlaylistModal,removeVideoHandler,playlistModal}= usePlaylistCtx();
                     Watch later
                   </li>
                 </div>
-              )}
-              </div>
-             
+              } 
             </div>
+           
+              
           );
+         
         })
        
         }
-           
+        
     </div>
      
 

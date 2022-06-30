@@ -1,0 +1,38 @@
+.search-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 97%;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.profile-nav .fa{
+    cursor: pointer;
+}
+.search-nav .search{
+    background-color: #5a5f5f33;
+    border: 1px solid var(--sec-txt-color);
+    padding: 8px 5px;
+    border-radius: 5px;
+    color: var(--primary-txt-color);
+    min-width: 304px;
+}
+
+.profile-img{
+    width:40px;
+    height:40px;
+}
+
+.profile-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+
+.profile-nav i{
+    color:var(--sec-txt-color);
+    font-size: 20px;
+}
+

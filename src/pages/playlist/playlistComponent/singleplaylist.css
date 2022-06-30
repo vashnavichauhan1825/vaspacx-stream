@@ -4,11 +4,22 @@
     flex-direction: column;
     gap: 10px;
     align-items:center;
-    
+    color: var(--hue-color);
 }
 
+.playlist-box p{
+    color:var(--sec-txt-color);
+}
+.video-list i{
+    position: absolute;
+    top: 4%;
+    font-size: 20px;
+    right: 1%;
+    color: var(--sec-txt-color);
+}
 .video-list{
     padding: 0.5rem;
+    position: relative;
     display: grid;
     max-width: 1086px;
     background-color: #1c2f2f;

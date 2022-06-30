@@ -2,17 +2,24 @@ import './playlist.css'
 import imgPLaylist from './../../assets/img/aurora.jpg'
 import { Link } from 'react-router-dom'
 import { usePlaylistCtx } from 'Context/PlaylistContext'
+import Navbar from 'components/Navbar/Navbar'
 
 const Playlist = () => {
 
   const {playlist,removeFromPlaylist}=usePlaylistCtx()
- 
+    const playlistLength =playlist.length;
   return (
-    <div className='playlist-cont'>
+    <>
+    <Navbar/>
+  <div className='playlist-cont'>{playlistLength?
+  <>
     {playlist.map((playlist)=>{
+     
       return(
         <div key={playlist._id} className='single-playlist'>
-      
+        {console.log(playlist)}
+       {playlist.videos.length !==0 && <img src={playlist.videos[0].thumbnail}/>}
+        <small>{playlist.description}</small>
         <h3>{playlist.title}</h3>
         <i onClick={()=>removeFromPlaylist(playlist._id)} className="fa fa-trash" aria-hidden="true"></i>
       <div className='playlist-hover'>
@@ -20,21 +27,9 @@ const Playlist = () => {
       </div>
      </div>
       )
-    })}
-    
-     {/* <div className='single-playlist'>
-      <img src={imgPLaylist}/>
-      <div className='playlist-hover'>
-      <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-      </div>
-     </div>
-     <div className='single-playlist'>
-      <img src={imgPLaylist}/>
-      <div className='playlist-hover'>
-      <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-      </div>
-     </div> */}
+    })}</>: <h1>your playlist section is empty !</h1>}
     </div>
+</>
   )
 }
 
