@@ -1,9 +1,8 @@
 import './playlist.css'
-import imgPLaylist from './../../assets/img/aurora.jpg'
 import { Link } from 'react-router-dom'
 import { usePlaylistCtx } from 'Context/PlaylistContext'
 import Navbar from 'components/Navbar/Navbar'
-
+import { ToastContainer } from 'react-toastify';
 const Playlist = () => {
 
   const {playlist,removeFromPlaylist}=usePlaylistCtx()
@@ -29,6 +28,7 @@ const Playlist = () => {
       )
     })}</>: <h1>your playlist section is empty !</h1>}
     </div>
+    <ToastContainer/>
 </>
   )
 }

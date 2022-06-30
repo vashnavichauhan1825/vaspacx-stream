@@ -78,7 +78,11 @@
 
 @media only screen and (max-width: 600px){
     .hero-cont{
-      background-image:cover;
+     
+      background-image: linear-gradient(to bottom, #eeeeee00 87%, #0d2424 97%),url('./../../../assets/img/potraitImg.jpg');
+    }
+    .hidden{
+        display:none;
     }
 
     .hero-details{

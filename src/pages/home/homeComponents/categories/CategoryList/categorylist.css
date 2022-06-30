@@ -12,6 +12,7 @@
     grid-template-rows: 185px 1fr;
     background-color: #1c2f2f;
     border-radius: 10px;
+    max-width: 350px;
     border: 2px solid #2f3a3a;
     position: relative;
 }

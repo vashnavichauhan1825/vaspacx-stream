@@ -2,7 +2,9 @@ import './singleplaylist.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
 import { usePlaylistCtx } from 'Context/PlaylistContext'
+import Navbar from 'components/Navbar/Navbar';
 const SinglePlaylistPage = () => {
     const encodedToken = localStorage.getItem("token")
     const [playlists,setPlaylists]= useState({name:"",videos:[]});
@@ -33,6 +35,8 @@ const SinglePlaylistPage = () => {
       const videoLength = playlists.videos.length
 
   return (
+    <>
+    <Navbar/>
     <div className='playlist-box'>
     <h1>{playlists.name}</h1>{videoLength? 
     <>
@@ -48,7 +52,9 @@ const SinglePlaylistPage = () => {
             <i onClick={()=>removeVideoHandler(playlistId, video._id)}  class="fa fa-times" aria-hidden="true"></i>
         </div>
      ) )  }</>:<p>{`your ${playlists.name} playlist is empty !`}</p>}
+     <ToastContainer/>
     </div>
+    </>
   )
 }
 

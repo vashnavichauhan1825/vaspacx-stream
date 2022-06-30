@@ -2,9 +2,8 @@ import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import "./home.css";
-import { NavLink } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 import Vaspacx from "./logo/Vaspacx";
-import TextButton from "./button/TextButton";
 import { useAuthCtx } from "Context/AuthContext";
 const HomeWrapper = ({ children }) => {
   const location = useLocation();
@@ -45,6 +44,7 @@ const HomeWrapper = ({ children }) => {
         {children}
       </div>
       }
+      <ToastContainer/>
     </>
   );
 };

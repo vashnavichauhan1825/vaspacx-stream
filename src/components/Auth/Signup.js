@@ -1,13 +1,11 @@
 import AuthWrapper from 'components/UI/AuthWrapper'
 import PrimaryButton from 'components/UI/button/PrimaryButton'
-import SecondayButton from 'components/UI/button/SecondayButton'
 import { useAuthCtx } from 'Context/AuthContext'
+import { ToastContainer } from 'react-toastify';
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import './login.css'
 
 const Signup = () => {
-    const navigate = useNavigate();
     const [formDetails , setFormDetails] =useState({
         firstName:"",
         lastName:"",
@@ -61,6 +59,7 @@ const Signup = () => {
          
         </div>
       </form>
+      <ToastContainer/>
       </AuthWrapper>
   )
 }

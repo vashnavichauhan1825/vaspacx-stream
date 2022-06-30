@@ -26,3 +26,12 @@ margin: 5px 0px;
     font-size: 40px;
     color: var(--primary-txt-color);
 }
+
+@media only screen and (max-width: 600px){
+    .auth-heading h1{
+        font-size:26px;
+    }
+    .detail-box{
+        flex-wrap: wrap;
+    }
+}

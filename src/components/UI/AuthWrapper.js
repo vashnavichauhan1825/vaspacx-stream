@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import './auth.css'
 
+
 const AuthWrapper = ({children}) => {
     const location = useLocation()
    const linkValue = location.pathname !== "/login"

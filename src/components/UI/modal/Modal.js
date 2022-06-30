@@ -1,7 +1,7 @@
 import { usePlaylistCtx } from "Context/PlaylistContext";
 import { useState } from "react";
 import "./modal.css";
-
+import { ToastContainer } from 'react-toastify';
 const Modal = () => {
   const {
     setPlaylistModal,
@@ -114,7 +114,9 @@ const Modal = () => {
           </>
         )}
       </div>
+      <ToastContainer/>
     </div>
+    
   );
 };
 

@@ -1,6 +1,6 @@
 import AuthWrapper from 'components/UI/AuthWrapper'
 import PrimaryButton from 'components/UI/button/PrimaryButton'
-import SecondayButton from 'components/UI/button/SecondayButton'
+import { ToastContainer } from 'react-toastify';
 import { useAuthCtx } from 'Context/AuthContext'
 import { useState } from 'react'
 import './login.css'
@@ -41,6 +41,7 @@ const Login = () => {
           <button className='sec-button' type='click' onClick={()=>setFormDetails({email:"guestvaspacx@gmail.com", password:"2000"})}>Login As Guest</button>
         </div>
       </form>
+      <ToastContainer/>
     </AuthWrapper>
   )
 }
