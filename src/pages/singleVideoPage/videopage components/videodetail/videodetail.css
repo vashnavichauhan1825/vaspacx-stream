@@ -28,3 +28,11 @@
     color: var(--primary-txt-color);
     min-width: 106px;
 }
+
+.video-name{
+    margin-left:20px;
+}
+
+.btn-cont .sec-button{
+    width:70px;
+}

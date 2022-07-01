@@ -33,7 +33,7 @@ const VideoDetail = () => {
              <AvatarCont color={video.thumbnailColor}>
                     <img className="profile-img" src={video.creator} />
                   </AvatarCont>
-        <span>
+        <span className='video-name'>
             <h1>{video.title}</h1>
             <p>{video.views}</p>
         </span>
