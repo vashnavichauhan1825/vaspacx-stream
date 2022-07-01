@@ -10,6 +10,7 @@ import Login from "components/Auth/Login";
 import SinglePlaylistPage from "pages/playlist/playlistComponent/SinglePlaylistPage";
 import ProtectedRoute from "components/Protected routes/ProtectedRoute";
 import RedirectRoute from "components/Protected routes/RedirectRoute";
+import SingleVideoPage from "pages/singleVideoPage/SingleVideoPage";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/watchlater" element={<WatchLater />} />
             <Route path="/history" element={<History />} />
             <Route path="/playlist" element={<Playlist />} />
+            <Route path="/videos/:videoId" element={<SingleVideoPage/>}/>
             <Route path="/playlist/:playlistId" element={<SinglePlaylistPage/>}></Route>
             </Route>
             <Route element={<RedirectRoute/>}>

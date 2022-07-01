@@ -1,0 +1,38 @@
+.detail-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-section .avatar-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.avatar-box h1 {
+  color: var(--cta-color);
+}
+
+.avatar-box p{
+    color:var(--primary-txt-color);
+}
+
+.btn-cont{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-cont .pri-button{
+    background: #f24d4d;
+    color: var(--primary-txt-color);
+    min-width: 106px;
+}
+
+.video-name{
+    margin-left:20px;
+}
+
+.btn-cont .sec-button{
+    width:70px;
+}

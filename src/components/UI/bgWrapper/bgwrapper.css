@@ -1,0 +1,4 @@
+.bg-img{
+    height: 100vh;
+    background-image: linear-gradient(to bottom left, #eeeeee00 -34%, #0d2424 52%),url('./../../../assets/img/fantasy-2368432_1920.jpg');
+}
