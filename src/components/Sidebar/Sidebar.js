@@ -19,6 +19,15 @@ const SidebarWrapper = styled.div`
     box-shadow:-3px 2px 20px 0px #637272;
     padding: 1rem 1rem 1rem 0rem;
     transition:all 0.5s ease-in-out;
+
+    .rightIcon{
+      -ms-transform: rotate(${(props)=>props.rotate}); 
+      transform: rotate(${(props)=>props.rotate});
+      transition:all 0.5s ease-in-out;
+      position: absolute;
+    right: -12%;
+    top: 53%;
+    }
 `
 const Sidebar = () => {
   const [openSideBar, setOpenSidebar]= useState(true)
@@ -26,7 +35,7 @@ const Sidebar = () => {
   const {isLoggedIn,logout} = useAuthCtx();
   return (
     
-      <SidebarWrapper  slide={openSideBar?"-315px":"0px"}>
+      <SidebarWrapper rotate={openSideBar?"0deg":"180deg"} slide={openSideBar?"-315px":"0px"}>
        <Vaspacx/>
 
         <ul className="sidebar-list-cont">
@@ -88,7 +97,7 @@ const Sidebar = () => {
         {!isLoggedIn? <Link to="/login"><li><i class="fa fa-user" aria-hidden="true"></i><span>Account</span></li></Link>:
          <li onClick={logout}><i class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span></li>}
         </ul>
-        <img onClick={()=>setOpenSidebar(prev =>!prev)} className="rightIcon" src={rightIcon}/>
+        <img  onClick={()=>setOpenSidebar(prev =>!prev)} className="rightIcon" src={rightIcon}/>
       </SidebarWrapper>
   
   );

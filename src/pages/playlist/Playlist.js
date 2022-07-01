@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import { usePlaylistCtx } from 'Context/PlaylistContext'
 import Navbar from 'components/Navbar/Navbar'
 import { ToastContainer } from 'react-toastify';
+import BgWrapper from 'components/UI/bgWrapper/BgWrapper';
 const Playlist = () => {
 
   const {playlist,removeFromPlaylist}=usePlaylistCtx()
     const playlistLength =playlist.length;
   return (
-    <>
+   <BgWrapper>
     <Navbar/>
   <div className='playlist-cont'>{playlistLength?
   <>
@@ -29,7 +30,7 @@ const Playlist = () => {
     })}</>: <h1>your playlist section is empty !</h1>}
     </div>
     <ToastContainer/>
-</>
+</BgWrapper>
   )
 }
 

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import { usePlaylistCtx } from 'Context/PlaylistContext'
 import Navbar from 'components/Navbar/Navbar';
+import BgWrapper from 'components/UI/bgWrapper/BgWrapper';
 const SinglePlaylistPage = () => {
     const encodedToken = localStorage.getItem("token")
     const [playlists,setPlaylists]= useState({name:"",videos:[]});
@@ -35,7 +36,7 @@ const SinglePlaylistPage = () => {
       const videoLength = playlists.videos.length
 
   return (
-    <>
+    <BgWrapper>
     <Navbar/>
     <div className='playlist-box'>
     <h1>{playlists.name}</h1>{videoLength? 
@@ -54,7 +55,7 @@ const SinglePlaylistPage = () => {
      ) )  }</>:<p>{`your ${playlists.name} playlist is empty !`}</p>}
      <ToastContainer/>
     </div>
-    </>
+    </BgWrapper>
   )
 }
 

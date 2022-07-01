@@ -1,0 +1,7 @@
+.videopage-section{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    padding: 1rem;
+}
+
