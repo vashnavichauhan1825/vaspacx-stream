@@ -8,6 +8,7 @@ import VideoContainer from './videopage components/VideoContainer';
 import './videopage.css'
 import { useVideoContext } from 'Context/ReducerContext';
 import { usePlaylistCtx } from 'Context/PlaylistContext';
+import VideoDetail from './videopage components/videodetail/VideoDetail';
 const SingleVideoPage = () => {
   const {dispatch} = useVideoContext();
   const {playlistModal} = usePlaylistCtx()
@@ -37,7 +38,9 @@ const SingleVideoPage = () => {
         <div className='videopage-section'>
         <VideoContainer/>
         <SideVideos/>
+       
         </div>
+        
        {playlistModal.state && <Modal/>}
     </BgWrapper>
    
