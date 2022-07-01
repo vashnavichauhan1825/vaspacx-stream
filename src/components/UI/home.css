@@ -1,6 +1,51 @@
+.signupBg{
+    background-image: linear-gradient(to left, #eeeeee00 47%, #0d2424 114%),url('./../../assets/img/aurora.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+}
 
+.login-nav{
+    align-self: flex-end;
+    display: flex;
+    margin-right: 44px;
+    padding: 1rem;
+    font-size: 18px;
+    color: var(--primary-txt-color);
+    gap: 20px; 
+}
+
+.login-nav a{
+    text-decoration: none;
+    color:var(--primary-txt-color);
+}
+.text-button{
+    padding: 0.5rem;
+    width: auto;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    background:transparent;
+    color: var(--sec-txt-color);
+    border: none;
+}
 
 .main-layout{
     margin-left: 317px;
     overflow: hidden;
+}
+
+.auth-layout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:100%;
+    margin-left:15rem;
+  
+}
+
+.auth-layout .vaspacx{
+    font-size:70px;
 }

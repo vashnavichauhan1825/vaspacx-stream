@@ -1,0 +1,15 @@
+.vaspacx{
+    width:auto;
+    padding:1rem;
+    font-size:30px;
+    letter-spacing:1px;
+    font-family:sans-serif;
+}
+
+.clr-text{
+    color:var(--primary-txt-color);
+}
+
+.clr-hue{
+    color:var(--hue-color)
+}
