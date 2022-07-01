@@ -7,6 +7,9 @@ import History from "pages/History/History";
 import Playlist from "pages/playlist/Playlist";
 import Signup from "components/Auth/Signup";
 import Login from "components/Auth/Login";
+import SinglePlaylistPage from "pages/playlist/playlistComponent/SinglePlaylistPage";
+import ProtectedRoute from "components/Protected routes/ProtectedRoute";
+import RedirectRoute from "components/Protected routes/RedirectRoute";
 
 
 function App() {
@@ -16,14 +19,17 @@ function App() {
         <HomeWrapper>
           <Routes>
             <Route path="/" element={<Home />} />
-
+            <Route element={<ProtectedRoute/>}>
             <Route path="/liked" element={<Like />} />
             <Route path="/watchlater" element={<WatchLater />} />
             <Route path="/history" element={<History />} />
-            <Route path="playlist" element={<Playlist />} />
-
+            <Route path="/playlist" element={<Playlist />} />
+            <Route path="/playlist/:playlistId" element={<SinglePlaylistPage/>}></Route>
+            </Route>
+            <Route element={<RedirectRoute/>}>
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            </Route>
           </Routes>
         </HomeWrapper>
       }

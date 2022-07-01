@@ -32,10 +32,6 @@
     border: none;
 }
 
-.main-layout{
-    margin-left: 317px;
-    overflow: hidden;
-}
 
 .auth-layout{
     display: flex;
@@ -48,4 +44,19 @@
 
 .auth-layout .vaspacx{
     font-size:70px;
+}
+
+@media only screen and (max-width: 600px){
+    .auth-layout {
+        margin:0;
+        flex-wrap:wrap-reverse;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .auth-cont{
+        margin:0.5rem;
+    }
+    .auth-layout .vaspacx {
+        font-size: 43px;
+    }
 }

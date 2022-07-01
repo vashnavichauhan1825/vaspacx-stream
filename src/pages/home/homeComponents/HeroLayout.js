@@ -5,12 +5,14 @@ import heroHeading from './../../../assets/img/heroHeading.png'
 import { Link } from 'react-router-dom'
 import PrimaryButton from 'components/UI/button/PrimaryButton'
 import { useAuthCtx } from 'Context/AuthContext'
+import Vaspacx from 'components/UI/logo/Vaspacx'
 const HeroLayout = () => {
  const {isLoggedIn,logout} = useAuthCtx();
   return (
     
     <div className='hero-cont'>
         <div className='search-nav'>
+        <Vaspacx/>
         <input  className="search" placeholder="Search..." />
          <div className='profile-nav'>
             <i className="fa fa-bell" ></i>

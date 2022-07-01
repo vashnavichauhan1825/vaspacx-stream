@@ -1,6 +1,10 @@
 import axios from "axios";
+import { ErrorToast } from "components/UI/Toast/ErrorToast";
+import { SuccessToast } from "components/UI/Toast/SuccessToast";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+
 
 const AuthContext = createContext({
   signup: () => {},
@@ -31,9 +35,10 @@ const AuthProvider = ({ children }) => {
       if (response.status === 201) {
 
       navigate("/login")
+      SuccessToast("Signup  Successfully !")
       }
     } catch (error) {
-      console.log(error);
+       ErrorToast(`${error.response.data.errors}`)
     }
   };
 
@@ -45,23 +50,26 @@ const AuthProvider = ({ children }) => {
         password: password,
       });
       if (response.status === 200) {
-        console.log(response);
+       
         localStorage.setItem("token",response.data.encodedToken);
         localStorage.setItem("user",response.data.foundUser.firstName);
         setToken(response.data.encodedToken);
         setUser(response.data.foundUser.firstName)     
         navigate("/")
+        SuccessToast(`${response.data.foundUser.firstName} Logged In successfully !`)
      }
     } catch (error) {
-      console.log(error);
+     
     }
   };
 
   const logoutHandler=()=>{
+    ErrorToast(`${user} Logged Out !`)
     localStorage.clear();
     setToken(null);
     setUser("")
     navigate("/")
+   
   }
 
   const ctxValue = {
