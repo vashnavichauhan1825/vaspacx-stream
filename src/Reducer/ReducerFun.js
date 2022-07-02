@@ -5,7 +5,8 @@ export const ReducerFun =(state,action)=>{
             return{
                 ...state,loading:!state.loading,
             }
-
+            case 'LIKE':
+                return {...state, liked: action.payload}
             case "VIDEOS":
              return {
         ...state,
