@@ -36,6 +36,10 @@
     left: 4%;
 }
 
+.h1-pri h1{
+    color:var(--sec-txt-color);
+}
+
 .single-playlist small{
     position: absolute;
     top: 40%;

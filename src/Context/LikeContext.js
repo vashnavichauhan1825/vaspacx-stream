@@ -1,4 +1,6 @@
 import axios from "axios"
+import { ErrorToast } from "components/UI/Toast/ErrorToast";
+import { SuccessToast } from "components/UI/Toast/SuccessToast";
 import { createContext, useContext } from "react"
 import { useVideoContext } from "./ReducerContext";
 
@@ -14,6 +16,7 @@ const LikeProvider =({children})=>{
             const response = await axios.post("/api/user/likes",{video},
             {headers:{authorization:encodedToken}})
             if(response.status === 201){
+                SuccessToast("Video Liked !")
                 dispatch({type:"LIKE",payload:response.data.likes});
             }
         } catch (error) {
@@ -22,12 +25,13 @@ const LikeProvider =({children})=>{
     }
 
 const removeLikeHandler = async (id) => {
+    console.log(id)
     try {
       const response = await axios.delete(`/api/user/likes/${id}`, {
         headers: { authorization: encodedToken },
       });
       if (response.status === 200) {
-       
+       ErrorToast("Video Unliked !")
         dispatch({ type: "LIKE", payload: response.data.likes });
       }
     } catch (error) {

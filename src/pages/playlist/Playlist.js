@@ -27,7 +27,7 @@ const Playlist = () => {
       </div>
      </div>
       )
-    })}</>: <h1>your playlist section is empty !</h1>}
+    })}</>: <span className='h1-pri'><h1>your playlist section is empty !</h1></span>}
     </div>
     <ToastContainer/>
 </BgWrapper>

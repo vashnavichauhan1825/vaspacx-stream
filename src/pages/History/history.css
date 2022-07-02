@@ -9,12 +9,12 @@
 
 .pri-white-center{
     text-align: center;
-    color:var(--primary-txt-color);
+    color:var(--cta-color);
 }
 
 .text-center{
     text-align: center;
-    color:var(--cta-color);
+    color:var(--sec-txt-color);
 }
 
 .flex-row{

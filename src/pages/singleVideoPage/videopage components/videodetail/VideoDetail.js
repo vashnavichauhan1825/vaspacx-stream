@@ -1,5 +1,5 @@
-import PrimaryButton from 'components/UI/button/PrimaryButton'
 import SecondayButton from 'components/UI/button/SecondayButton'
+import { useLikeCtx } from 'Context/LikeContext'
 import { useVideoContext } from 'Context/ReducerContext'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
@@ -23,7 +23,8 @@ const AvatarCont = styled.div`
 
 
 const VideoDetail = () => {
-   const {videos} =useVideoContext();
+   const {videos,like} =useVideoContext();
+   const {addLikeHandler , removeLikeHandler} =useLikeCtx();
    const {videoId} =useParams();
   return (
    videos.filter((video)=> video._id === videoId).map((video)=>{
@@ -39,7 +40,8 @@ const VideoDetail = () => {
         </span>
         </div>
         <span className='btn-cont'>
-            <PrimaryButton>Like <i class="fa fa-heart" aria-hidden="true"></i></PrimaryButton>
+        {like.some((v) => v._id === video._id) ? (
+            <button className='pri-btn remove-like' onClick={()=>removeLikeHandler(video._id)}>Like <i class="fa fa-heart" aria-hidden="true"></i></button>):(<button  className='pri-btn' onClick={()=>addLikeHandler(video)}>Like <i class="fa fa-heart" aria-hidden="true"></i></button>)}
             <SecondayButton>Share <i class="fa fa-share" aria-hidden="true"></i>
 </SecondayButton>
         </span>

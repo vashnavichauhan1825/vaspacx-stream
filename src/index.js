@@ -9,6 +9,7 @@ import { AuthProvider } from "Context/AuthContext";
 import { PlaylistProvider } from "Context/PlaylistContext";
 import { VideoProvider } from "Context/ReducerContext";
 import { HistoryProvider } from "Context/HistoryContext";
+import { LikeProvider } from "Context/LikeContext";
 // Call make Server
 makeServer();
 
@@ -16,13 +17,15 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <VideoProvider>
-        <PlaylistProvider>
-          <HistoryProvider>
-            <AuthProvider>
-              <App />
-            </AuthProvider>
-          </HistoryProvider>
-        </PlaylistProvider>
+        <LikeProvider>
+          <PlaylistProvider>
+            <HistoryProvider>
+              <AuthProvider>
+                <App />
+              </AuthProvider>
+            </HistoryProvider>
+          </PlaylistProvider>
+        </LikeProvider>
       </VideoProvider>
     </BrowserRouter>
   </React.StrictMode>,
