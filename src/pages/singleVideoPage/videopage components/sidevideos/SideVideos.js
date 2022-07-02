@@ -30,7 +30,7 @@ const SideVideos = () => {
       navigate(`/videos/${videoId}`)
     },[videoId])
   return (
-    <div className='sideVideos-cont'>
+    <div className='sideVideos-cont hidden-cont'>
        <h4>Related Videos</h4>
         {shuffeledVideo.map((video)=>{
             return (

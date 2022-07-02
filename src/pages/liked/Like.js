@@ -4,9 +4,11 @@ import { useVideoContext } from "Context/ReducerContext"
 import { ToastContainer } from 'react-toastify';
 import PlaylistCard from "pages/playlist/playlistComponent/PlaylistCard";
 import './like.css'
+import { VaspacxStreamTitle } from "components/UI/documentTitle/VaspacxStreamTitle";
 
 const Like = () => {
   const {like}= useVideoContext();
+  VaspacxStreamTitle("Liked")
   const likedVideoLength = like.length;
   return (
     <BgWrapper>

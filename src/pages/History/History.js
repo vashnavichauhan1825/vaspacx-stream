@@ -1,5 +1,6 @@
 import Navbar from 'components/Navbar/Navbar';
 import BgWrapper from 'components/UI/bgWrapper/BgWrapper';
+import { VaspacxStreamTitle } from 'components/UI/documentTitle/VaspacxStreamTitle';
 import { useHistoryCtx } from 'Context/HistoryContext';
 import { useVideoContext } from 'Context/ReducerContext'
 import VideoCard from 'pages/home/homeComponents/categories/CategoryList/VideoCard';
@@ -9,7 +10,7 @@ import './history.css'
 const History = () => {
   const {history} = useVideoContext();
   const {removeHistoryHandler}= useHistoryCtx();
- console.log(history)
+ VaspacxStreamTitle("History")
   return (
     <BgWrapper>
     <Navbar/>

@@ -1,6 +1,7 @@
 import SecondayButton from 'components/UI/button/SecondayButton'
 import { useLikeCtx } from 'Context/LikeContext'
 import { useVideoContext } from 'Context/ReducerContext'
+import { useWatchLaterCtx } from 'Context/WatchLaterContext'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import './videodetail.css'
@@ -23,8 +24,9 @@ const AvatarCont = styled.div`
 
 
 const VideoDetail = () => {
-   const {videos,like} =useVideoContext();
+   const {videos,watchLater,like} =useVideoContext();
    const {addLikeHandler , removeLikeHandler} =useLikeCtx();
+   const { addWatchLaterHandler, removeFromWatchLater}= useWatchLaterCtx();
    const {videoId} =useParams();
   return (
    videos.filter((video)=> video._id === videoId).map((video)=>{
@@ -42,8 +44,9 @@ const VideoDetail = () => {
         <span className='btn-cont'>
         {like.some((v) => v._id === video._id) ? (
             <button className='pri-btn remove-like' onClick={()=>removeLikeHandler(video._id)}>Like <i class="fa fa-heart" aria-hidden="true"></i></button>):(<button  className='pri-btn' onClick={()=>addLikeHandler(video)}>Like <i class="fa fa-heart" aria-hidden="true"></i></button>)}
-            <SecondayButton>Share <i class="fa fa-share" aria-hidden="true"></i>
-</SecondayButton>
+           {watchLater.findIndex((videoItem)=>videoItem._id === video._id ) !== -1 ?(<button onClick={()=>removeFromWatchLater(video._id)} className='sec-button remove-watch'> Watch Later  <i class="fa fa-clock-o" aria-hidden="true"> </i>
+</button>):(<button onClick={()=>addWatchLaterHandler(video)}  className='sec-button'> Watch Later  <i class="fa fa-clock-o" aria-hidden="true"> </i>
+</button>) }
         </span>
     </div>
     )

@@ -4,8 +4,9 @@ import { usePlaylistCtx } from 'Context/PlaylistContext'
 import Navbar from 'components/Navbar/Navbar'
 import { ToastContainer } from 'react-toastify';
 import BgWrapper from 'components/UI/bgWrapper/BgWrapper';
+import { VaspacxStreamTitle } from 'components/UI/documentTitle/VaspacxStreamTitle';
 const Playlist = () => {
-
+  VaspacxStreamTitle("Playlists")
   const {playlist,removeFromPlaylist}=usePlaylistCtx()
     const playlistLength =playlist.length;
   return (

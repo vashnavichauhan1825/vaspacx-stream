@@ -4,8 +4,10 @@ import { ToastContainer } from 'react-toastify';
 import { useAuthCtx } from 'Context/AuthContext'
 import { useState } from 'react'
 import './login.css'
+import { VaspacxStreamTitle } from 'components/UI/documentTitle/VaspacxStreamTitle';
 
 const Login = () => {
+  VaspacxStreamTitle("Login")
     const [formDetails , setFormDetails] =useState({
         email:"",
         password:"",

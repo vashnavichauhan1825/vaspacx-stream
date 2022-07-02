@@ -1,10 +1,7 @@
 export const ReducerFun =(state,action)=>{
     
     switch(action.type){
-        case "LOADING":
-            return{
-                ...state,loading:!state.loading,
-            }
+        
             case 'LIKE':
                 return {...state, like: action.payload}
             case "VIDEOS":
@@ -13,9 +10,9 @@ export const ReducerFun =(state,action)=>{
         videos: action.payload,
       };
 
-      case "WATCH_LATER":
+      case "WATCHLATER":
       return { ...state, watchLater: action.payload };
-      
+
       case "HISTORY":
         return { ...state, history: action.payload };
   

@@ -9,3 +9,9 @@
     text-align: center;
     color: var(--primary-txt-color);
 }
+
+@media only screen and (max-width: 600px){
+    .hidden-cont{
+        display:none;
+    }
+}
