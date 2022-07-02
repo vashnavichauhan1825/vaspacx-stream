@@ -5,6 +5,18 @@
     justify-content: space-evenly;
     padding: 2rem;
 }
+.playlist-cont .create-Playlist-h {
+    color: var(--cta-color);
+    font-size: 20px;
+    top: 30%;
+    left: 20%;
+}
+
+.playlist-hover .fa-plus {
+    font-size: 20px;
+    cursor: pointer;
+}
+
 
 .single-playlist{
     width: 350px;
