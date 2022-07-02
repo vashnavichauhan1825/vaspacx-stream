@@ -1,8 +1,9 @@
 import './primarybutton.css'
 
-const PrimaryButton = ({children}) => {
+const PrimaryButton = ({children,onClick}) => {
+  console.log(onClick)
   return (
-   <button className='pri-button'>{children}</button>
+   <button onClick={onClick} className='pri-button'>{children}</button>
   )
 }
 

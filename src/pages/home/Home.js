@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { usePlaylistCtx } from "Context/PlaylistContext";
 import { useVideoContext } from "Context/ReducerContext";
 import axios from "axios";
+import { VaspacxStreamTitle } from "components/UI/documentTitle/VaspacxStreamTitle";
 const Home = () => {
   const {playlistModal} = usePlaylistCtx();
   const {dispatch} = useVideoContext();
@@ -16,6 +17,7 @@ const Home = () => {
   const categoryValue = searchParams.get("category")
   const [category,setCategory]=useState(categoryValue)
   
+  VaspacxStreamTitle("Home");
   useEffect(()=>{(
     async function (){
       try {

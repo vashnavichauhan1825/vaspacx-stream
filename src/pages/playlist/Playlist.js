@@ -4,20 +4,31 @@ import { usePlaylistCtx } from 'Context/PlaylistContext'
 import Navbar from 'components/Navbar/Navbar'
 import { ToastContainer } from 'react-toastify';
 import BgWrapper from 'components/UI/bgWrapper/BgWrapper';
+import { VaspacxStreamTitle } from 'components/UI/documentTitle/VaspacxStreamTitle';
+import Modal from 'components/UI/modal/Modal';
 const Playlist = () => {
-
+  VaspacxStreamTitle("Playlists")
   const {playlist,removeFromPlaylist}=usePlaylistCtx()
     const playlistLength =playlist.length;
+    const {setPlaylistModal,playlistModal}=usePlaylistCtx();
   return (
    <BgWrapper>
     <Navbar/>
-  <div className='playlist-cont'>{playlistLength?
+  <div className='playlist-cont'>
+  <div className='single-playlist'>
+  <h3 className='create-Playlist-h'>Create Playlist</h3>
+   <div className='playlist-hover'>
+   <i  onClick={() => setPlaylistModal({ state: true, video: {} })} class="fa fa-plus" aria-hidden="true"></i>
+   </div>
+  </div>
+  {playlistLength?
   <>
+  
     {playlist.map((playlist)=>{
      
       return(
         <div key={playlist._id} className='single-playlist'>
-        {console.log(playlist)}
+       
        {playlist.videos.length !==0 && <img src={playlist.videos[0].thumbnail}/>}
         <small>{playlist.description}</small>
         <h3>{playlist.title}</h3>
@@ -27,9 +38,10 @@ const Playlist = () => {
       </div>
      </div>
       )
-    })}</>: <h1>your playlist section is empty !</h1>}
+    })}</>: <span className='h1-pri'><h1>your playlist section is empty !</h1></span>}
     </div>
     <ToastContainer/>
+    {playlistModal.state && <Modal/>}
 </BgWrapper>
   )
 }

@@ -7,6 +7,8 @@ import Modal from "components/UI/modal/Modal";
 import { usePlaylistCtx } from "Context/PlaylistContext";
 import { useAuthCtx } from "Context/AuthContext";
 import { useVideoContext } from "Context/ReducerContext";
+import { useHistoryCtx } from "Context/HistoryContext";
+import { useWatchLaterCtx } from "Context/WatchLaterContext";
 
 const AvatarCont = styled.div`
   border-radius: 50%;
@@ -23,8 +25,10 @@ const CategoryList = ({ category }) => {
   const [dropDown, setDropDown] = useState({state:false,videoId:null});
 const {setPlaylistModal}= usePlaylistCtx();
 const navigate= useNavigate();
+const {addHistoryHandler} = useHistoryCtx()
 const {videos} = useVideoContext()
  const {isLoggedIn} = useAuthCtx();
+ const {addWatchLaterHandler , removeFromWatchLater}=useWatchLaterCtx();
   useEffect(() => {
     navigate("/")
   }, []);
@@ -47,8 +51,10 @@ const {videos} = useVideoContext()
                   </AvatarCont>
                   <div className="desc">
                   <Link to={`/videos/${video._id}`}>
+                  <span onClick={()=>addHistoryHandler(video)}>
                     <h3>{video.title}</h3>
                     <p>{video.description}</p>
+                    </span>
                     </Link>
                     <div>
                       <small>{video.views}</small>
@@ -72,16 +78,16 @@ const {videos} = useVideoContext()
                   onClick={()=>{setDropDown({state:false,videoId:null})}}
                 >
                {isLoggedIn?<>
-                  <li>
-                    <i className="fa fa-clock-o" aria-hidden="true"></i>Save To
+                  <li onClick={()=>addWatchLaterHandler(video)}>
+                    <i className="fa fa-clock-o"  aria-hidden="true"></i>Save To
                     Watch later
                   </li>
                   <li onClick={()=> setPlaylistModal({state:true,video:video})}> 
                     <i className="fa fa-list-ul" aria-hidden="true"></i>Save To
                     Playlist
                   </li>
-                  <li>
-                    <i className="fa fa-trash" aria-hidden="true"></i>Remove From
+                  <li onClick={()=> removeFromWatchLater(video._id)}>
+                    <i  className="fa fa-trash" aria-hidden="true"></i>Remove From
                     Watch later
                   </li></>:<Link to="/login"><li>
                     <i className="fa fa-clock-o" aria-hidden="true"></i>Save To

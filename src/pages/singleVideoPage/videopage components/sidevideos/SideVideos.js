@@ -3,7 +3,7 @@ import './sidevideos.css'
 import styled from 'styled-components';
 import VideoCard from 'pages/home/homeComponents/categories/CategoryList/VideoCard';
 import { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 
 const AvatarCont = styled.div`
   border-radius: 50%;
@@ -23,11 +23,14 @@ const AvatarCont = styled.div`
 
 const SideVideos = () => {
     const {videos} = useVideoContext();
-   
+    const {videoId}=useParams();
+   const navigate =useNavigate()
     const shuffeledVideo = [...videos].sort(()=> 0.5-Math.random()).slice(0,3)
-  
+    useEffect(()=>{
+      navigate(`/videos/${videoId}`)
+    },[videoId])
   return (
-    <div className='sideVideos-cont'>
+    <div className='sideVideos-cont hidden-cont'>
        <h4>Related Videos</h4>
         {shuffeledVideo.map((video)=>{
             return (

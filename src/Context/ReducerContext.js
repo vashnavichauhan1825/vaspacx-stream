@@ -1,23 +1,23 @@
-import { createContext, useContext, useReducer } from "react"
+import { createContext, useContext, useReducer } from "react";
 import { ReducerFun } from "Reducer/ReducerFun";
-
-
-
 
 const ReducerContext = createContext();
 
+const VideoProvider = ({ children }) => {
+  const [{ videos, like,watchLater, history }, dispatch] = useReducer(ReducerFun, {
+    videos: [],
+    history: [],
+    like: [],
+    watchLater:[],
+  });
 
-const VideoProvider =({children})=>{
-    const [{videos},dispatch] = useReducer(ReducerFun,
-        {videos:[]})
+  return (
+    <ReducerContext.Provider value={{ videos,like,watchLater, history, dispatch }}>
+      {children}
+    </ReducerContext.Provider>
+  );
+};
 
-        return (
-            <ReducerContext.Provider value={{videos,dispatch}}>
-                {children}
-            </ReducerContext.Provider>
-        )
-}
+const useVideoContext = () => useContext(ReducerContext);
 
-const useVideoContext =()=>useContext(ReducerContext);
-
-export {useVideoContext, VideoProvider }
+export { useVideoContext, VideoProvider };

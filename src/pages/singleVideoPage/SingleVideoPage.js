@@ -9,8 +9,11 @@ import './videopage.css'
 import { useVideoContext } from 'Context/ReducerContext';
 import { usePlaylistCtx } from 'Context/PlaylistContext';
 import VideoDetail from './videopage components/videodetail/VideoDetail';
+import { ToastContainer } from 'react-toastify';
+import { VaspacxStreamTitle } from 'components/UI/documentTitle/VaspacxStreamTitle';
 const SingleVideoPage = () => {
   const {dispatch} = useVideoContext();
+  VaspacxStreamTitle("Watch")
   const {playlistModal} = usePlaylistCtx()
   useEffect(() => {
    
@@ -40,7 +43,7 @@ const SingleVideoPage = () => {
         <SideVideos/>
        
         </div>
-        
+        <ToastContainer/>
        {playlistModal.state && <Modal/>}
     </BgWrapper>
    

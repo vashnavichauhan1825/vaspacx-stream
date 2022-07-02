@@ -4,8 +4,10 @@ import { useAuthCtx } from 'Context/AuthContext'
 import { ToastContainer } from 'react-toastify';
 import { useState } from 'react'
 import './login.css'
+import { VaspacxStreamTitle } from 'components/UI/documentTitle/VaspacxStreamTitle';
 
 const Signup = () => {
+  VaspacxStreamTitle("Sign Up")
     const [formDetails , setFormDetails] =useState({
         firstName:"",
         lastName:"",
