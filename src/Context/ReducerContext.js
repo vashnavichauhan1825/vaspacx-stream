@@ -8,11 +8,12 @@ const ReducerContext = createContext();
 
 
 const VideoProvider =({children})=>{
-    const [{videos},dispatch] = useReducer(ReducerFun,
-        {videos:[]})
+    const [{videos,history},dispatch] = useReducer(ReducerFun,
+        {videos:[],
+        history:[]})
 
         return (
-            <ReducerContext.Provider value={{videos,dispatch}}>
+            <ReducerContext.Provider value={{videos,history,dispatch}}>
                 {children}
             </ReducerContext.Provider>
         )

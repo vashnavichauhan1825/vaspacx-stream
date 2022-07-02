@@ -4,6 +4,7 @@ import './categorylist.css'
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useAuthCtx } from "Context/AuthContext";
+import { useHistoryCtx } from "Context/HistoryContext";
 
 const AvatarCont = styled.div`
   border-radius: 50%;
@@ -23,7 +24,8 @@ const AvatarCont = styled.div`
 const VideoCard = ({video,sideCard}) => {
     const [dropDown, setDropDown] = useState({state:false,videoId:null});
     const {setPlaylistModal}= usePlaylistCtx();
-    const {isLoggedIn} =useAuthCtx()
+    const {isLoggedIn} =useAuthCtx();
+    const {addHistoryHandler}= useHistoryCtx();
   
   return (
     <div className="video-item" key={video._id}>
@@ -36,8 +38,10 @@ const VideoCard = ({video,sideCard}) => {
                   </AvatarCont>
                   <div className="desc">
                   <Link to={`/videos/${video._id}`}>
+                  <span onClick={()=>addHistoryHandler(video)}>
                     <h3>{video.title}</h3>
-                 {!sideCard &&  <p>{video.description}</p>}
+                   {!sideCard &&  <p>{video.description}</p>}
+                   </span>
                     </Link>
                     <div>
                       <small>{video.views}</small>
