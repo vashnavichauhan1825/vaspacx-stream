@@ -1,5 +1,5 @@
 export const ReducerFun =(state,action)=>{
-    const encodedToken = localStorage.getItem("token")
+    
     switch(action.type){
         case "LOADING":
             return{
@@ -12,6 +12,10 @@ export const ReducerFun =(state,action)=>{
         ...state,
         videos: action.payload,
       };
+
+      case "WATCH_LATER":
+      return { ...state, watchLater: action.payload };
+      
       case "HISTORY":
         return { ...state, history: action.payload };
   
