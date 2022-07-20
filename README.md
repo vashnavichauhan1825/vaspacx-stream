@@ -56,8 +56,6 @@ vaspacx stream is a video library app built using react where you will find vide
 
 ```
 gh repo clone vashnavichauhan1825/vaspacx-stream
-
-cd Video-Library
 ```
 
 - install dependencies (if you are using **yarn** then do with that)
