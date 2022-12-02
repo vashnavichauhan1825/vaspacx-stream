@@ -1,0 +1,18 @@
+.like-section{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1.5rem;
+    gap: 20px;
+    flex-direction: column; 
+}
+
+.like-heading h1{
+    text-align: center;
+    color:var(--cta-color)
+}
+
+.center h3{
+    color:var(--sec-txt-color);
+    text-align: center;
+}

@@ -1,0 +1,32 @@
+.history-section{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1.5rem;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.pri-white-center{
+    text-align: center;
+    color:var(--cta-color);
+}
+
+.text-center{
+    text-align: center;
+    color:var(--sec-txt-color);
+}
+
+.flex-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.clr-sec{
+    color:var(--sec-txt-color)
+}
+
+.flex-row u{
+    cursor: pointer;
+}

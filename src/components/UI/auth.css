@@ -1,0 +1,37 @@
+.auth-cont{
+    padding: 2rem;
+    background: rgba( 13, 36, 36, 0.35 );
+    width: 420px;
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.auth-heading{
+    margin-bottom: 20px;
+    letter-spacing:1px;
+    color: var(--sec-txt-color);
+} 
+
+.auth-heading a{
+    text-decoration: none;
+    color:var(--cta-color);
+}
+
+
+.auth-heading h1{
+margin: 5px 0px;
+    word-spacing:4px;
+    font-size: 40px;
+    color: var(--primary-txt-color);
+}
+
+@media only screen and (max-width: 600px){
+    .auth-heading h1{
+        font-size:26px;
+    }
+    .detail-box{
+        flex-wrap: wrap;
+    }
+}

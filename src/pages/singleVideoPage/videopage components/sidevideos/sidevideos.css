@@ -1,0 +1,17 @@
+.sideVideos-cont{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.sideVideos-cont h4{
+    margin: 0;
+    text-align: center;
+    color: var(--primary-txt-color);
+}
+
+@media only screen and (max-width: 600px){
+    .hidden-cont{
+        display:none;
+    }
+}

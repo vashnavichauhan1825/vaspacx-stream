@@ -1,0 +1,86 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.name-info{
+    padding: 0.3rem;
+    border: 1px solid var(--sec-txt-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    color: var(--primary-txt-color);
+    border-radius: 10px;
+}
+
+.detail-box{
+    display: flex;
+    gap: 20px;
+}
+
+.detail-box .name-info{
+    width:200px;
+}
+.name-info i{
+    color: var(--sec-txt-color);
+}
+.name-info span{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.name-info span label{
+color:var(--sec-txt-color);
+font-size:10px;
+
+}
+.name-info span input{
+    background: transparent;
+    border: none;
+    width: auto;
+    font-weight: bold;
+    color:var(--primary-txt-color);
+}
+
+
+
+input:focus{
+    background:transparent;
+    outline: none;
+    font-weight: bold;
+    width: auto;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #152e3b inset !important;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--primary-txt-color) !important;
+}
+
+.button-cont{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.sec-button{
+    padding: 0.5rem;
+    width: auto;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #1c2f2f;
+    color: var(--sec-txt-color);
+    border: none;
+    box-shadow: 0px 0px 7px 4px var(--bg-color);
+}

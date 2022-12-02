@@ -1,0 +1,95 @@
+.hero-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #eeeeee00 87%, #0d2424 97%),url('./../../../assets/img/astro.jpg');
+}
+
+.search-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 97%;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.profile-nav .fa{
+    cursor: pointer;
+}
+
+.search-nav .search{
+    background-color: #5a5f5f33;
+    border: 1px solid var(--sec-txt-color);
+    padding: 8px 5px;
+    border-radius: 5px;
+    color: var(--primary-txt-color);
+    min-width: 304px;
+}
+
+.profile-img{
+    width:40px;
+    height:40px;
+}
+
+.profile-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+
+.profile-nav i{
+    color:var(--sec-txt-color);
+    font-size: 20px;
+}
+
+.hero-details{
+    margin: 2rem;
+    width: 438px;
+    letter-spacing: 1px;
+    line-height: 2;
+    padding: 4rem;
+}
+
+.hero-details img{
+    width:600px;
+}
+
+
+.clr-pri{
+    color:var(--primary-txt-color);
+}
+
+.clr-sec{
+    color:var(--sec-txt-color)
+}
+
+.bdr-hue{
+    border-radius:50%;
+    padding:0.2rem;
+    border:2px dotted var(--hue-color);
+}
+
+@media only screen and (max-width: 600px){
+    .hero-cont{
+     
+      background-image: linear-gradient(to bottom, #eeeeee00 87%, #0d2424 97%),url('./../../../assets/img/potraitImg.jpg');
+    }
+    .hidden{
+        display:none;
+    }
+
+    .hero-details{
+        width:300px;
+    }
+
+    .hero-details img{
+        width:250px;
+    }
+}
