@@ -4,7 +4,7 @@ import { SuccessToast } from "components/UI/Toast/SuccessToast";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// authenti
+// authention
 
 const AuthContext = createContext({
   signup: () => {},
